@@ -1,0 +1,76 @@
+import time
+import random
+
+responses = [
+
+        "Absolutely not!",
+        "Nah",
+        "Yes",
+        "Of course!",
+        "Hell yeah!",
+        "yup.",
+        "Ehhh... nah",
+        "Ehhh... yeah",
+        "Nope",
+
+    ]
+
+Shop = [
+
+    "Computer",
+    "Informational Book"
+]
+
+playerPoints = 0
+
+pointsPerQuestion = 1
+waitTimeForAnswers = 5
+
+print("Welcome to magic 8 ball!")
+
+time.sleep(1)
+
+print("You will recieve 1 point for every question you produce and will be able to unlock perks")
+
+time.sleep(2)
+
+print("Type 'Exit' anytime to end the game, type 'Shop' to view the shop and buy perks, or type 'Score' to recieve your current score ")
+
+time.sleep(2)
+
+while True:
+
+    time.sleep(1)
+
+    # Prompt the user to type a sentence
+
+    Question = input("Please type a sentence: ").lower()
+    time.sleep(0.5)
+
+    if Question == "exit":
+        break
+    elif Question == "score":
+        print("Your score is: "+ str(playerPoints))
+    elif Question == "shop":
+        print("The shop contains the following items:", str(Shop))
+        time.sleep(1)
+        playerShopChoice = input("Please type the number associating to the item (1,2) and either 'Buy' or 'Info' to get information on the object or purchase it:")
+        
+        
+        break
+
+
+
+    print("Computer processing question and evaluting a response...")
+
+    time.sleep(waitTimeForAnswers)
+
+    answer = random.choice(responses)
+
+    playerPoints += pointsPerQuestion
+
+    print(answer)
+    
+    time.sleep(1)
+
+  
